@@ -13,7 +13,7 @@ export default class App extends Component {
           <Header />
           <div id="view">
             <Route path="/apiintegration/" component ={APIIntegration}/>
-            <Route path="/clipboard/" component ={Clipboard}/>
+            <Route path="/clipboard/:q?" component ={Clipboard}/>
             <Route path="/selfie/" component ={Selfie}/>
             {/* {making API integration page to be default page} */}
             <Route exact path="/" component ={APIIntegration}/>
