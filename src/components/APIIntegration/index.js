@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import AmCharts from "@amcharts/amcharts3-react";
 
 export default class APIExample extends Component{
   constructor(){
@@ -8,7 +9,8 @@ export default class APIExample extends Component{
       fromdate : "",
       todate : "",
       pagesize : 1,
-      page : 1
+      page : 1,
+      data:[]
     }
   }
 
@@ -23,6 +25,7 @@ export default class APIExample extends Component{
     this.fetchData(fromdate,todate,pagesize,page)
     .then(res=>{
       console.log(JSON.stringify(res));
+      this.setState({data: res.data.items})
     })
     .catch(err=>{
       console.log(err);
@@ -76,8 +79,48 @@ export default class APIExample extends Component{
           <input type="submit" value="Fetch Data" />
           </div>
         </form>
-        <div style={{height:"300px",width:"300px",background:"red"}}>
-        
+        <div style={{height:"300px"}}>
+          <AmCharts.React
+            style={{
+              width: "100%",
+              height: "100%"
+            }}
+            options={{
+              "type": "serial",
+              "theme": "none",
+              "dataProvider": this.state.data,
+              "valueAxes": [ {
+                "gridColor": "#FFFFFF",
+                "gridAlpha": 0.2,
+                "dashLength": 0
+              } ],
+              "gridAboveGraphs": true,
+              "startDuration": 1,
+              "graphs": [ {
+                "balloonText": "[[name]]: <b>[[count]]</b>",
+                "fillAlphas": 0.8,
+                "lineAlpha": 0.2,
+                "type": "column",
+                "valueField": "count"
+              } ],
+              "chartCursor": {
+                "categoryBalloonEnabled": false,
+                "cursorAlpha": 0,
+                "zoomable": false
+              },
+              "categoryField": "name",
+              "categoryAxis": {
+                "gridPosition": "start",
+                "gridAlpha": 0,
+                "tickPosition": "start",
+                "tickLength": 20
+              },
+              "export": {
+                "enabled": true
+              }
+            }
+            } 
+            />
         </div>
       </div>
     )
