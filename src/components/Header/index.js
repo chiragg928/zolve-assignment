@@ -7,7 +7,7 @@ export default class Header extends Component{
     return(
       <div id="header">
         <Link to="/apiintegration" className="routeLink">API Integration</Link>
-        <Link to="/clipboard/hello" className="routeLink">Clipboard</Link>
+        <Link to="/clipboard?q=value-read-from-params" className="routeLink">Clipboard</Link>
         <Link to="/selfie" className="routeLink">Selfie</Link>
       </div>
     )
