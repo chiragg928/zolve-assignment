@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project have three views. 
 
-### `yarn start`
+### `npm install`
 
 This command installs all the dependencies.
 
