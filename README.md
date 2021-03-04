@@ -1,6 +1,6 @@
-# Getting Started with Zolve Assignment
+# Zolve Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project have three views. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project have three views. First install all the dependencies and then run the project. Commands for both these stpes are as follows:
 
 ### `npm install`
 
