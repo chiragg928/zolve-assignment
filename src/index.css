@@ -23,31 +23,20 @@ html, #root{
   width: 100%;
 
 }
-#view{
-  height: calc(100% - 54px);
-  width: 100%;
-}
-#header{
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: 54px;
-  width: 100%;
-  background: rgb(99, 136, 238);
-}
-#header > .routeLink{
-  font-size: 17px;
-  width: 100px;
-  height: 100%;
-  text-align: center;
-  text-decoration: none;
-  padding: 0 16px;
-  color: white;
-}
 .formRow{
   padding: 8px;
 }
 .formRow > label {
   display: inline-block;
   width: 100px;
+}
+
+#view{
+  height: calc(100% - 74px);
+  width: 100%;
+}
+@media screen and (max-width: 540px) {
+  #view{
+    height: calc(100% - 143px);
+  }
 }
