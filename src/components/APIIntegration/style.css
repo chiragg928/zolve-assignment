@@ -1,0 +1,20 @@
+.pageRow label {
+  display: inline-block;
+  width: 100px;
+  font-size: 16px;
+}
+.pageRow input {
+  font-size: 16px;
+}
+.pageRow.graphHold{
+  height: 500px;
+}
+
+@media screen and (max-width: 540px) {
+  .pageRow.graphHold{
+    height: 300px;
+  }
+  .pageRow label, .pageRow input  {
+    font-size: 14px;
+  }
+}

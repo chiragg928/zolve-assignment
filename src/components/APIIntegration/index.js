@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import AmCharts from "@amcharts/amcharts3-react";
+import "./style.css";
 
 export default class APIExample extends Component{
   constructor(){
@@ -57,29 +58,29 @@ export default class APIExample extends Component{
 
     return(
       <div>
-        <h4>API Integration example</h4>
+        <div className="pageHeading">3rd Party API and Visualization</div>
         <form onSubmit={this.onSubmit}>
-          <div className="formRow">
+          <div className="pageRow">
           <label htmlFor="fromdate">From Date</label>
           <input id="fromdate" type="date" name="fromdate" onChange={this.onChange} value={fromdate} />
           </div>
-          <div className="formRow">
+          <div className="pageRow">
           <label htmlFor="todate">To Date</label>
           <input id="todate" type="date" name="todate" onChange={this.onChange} value={todate} />
           </div>
-          <div className="formRow">
+          <div className="pageRow">
           <label htmlFor="pagesize">Page Size</label>
           <input id="pagesize" type="number" name="pagesize" onChange={this.onChange} value={pagesize} />
           </div>
-          <div className="formRow">
+          <div className="pageRow">
           <label htmlFor="page">Page</label>
           <input id="page" type="number" name="page" onChange={this.onChange} value={page} />
           </div>
-          <div className="formRow">
+          <div className="pageRow">
           <input type="submit" value="Fetch Data" />
           </div>
         </form>
-        <div style={{height:"300px"}}>
+        <div className="pageRow graphHold">
           <AmCharts.React
             style={{
               width: "100%",
@@ -92,7 +93,8 @@ export default class APIExample extends Component{
               "valueAxes": [ {
                 "gridColor": "#FFFFFF",
                 "gridAlpha": 0.2,
-                "dashLength": 0
+                "dashLength": 0,
+                "title": "Count"
               } ],
               "gridAboveGraphs": true,
               "startDuration": 1,
@@ -113,7 +115,10 @@ export default class APIExample extends Component{
                 "gridPosition": "start",
                 "gridAlpha": 0,
                 "tickPosition": "start",
-                "tickLength": 20
+                "tickLength": 20,
+                "labelRotation": 45,
+                "title": "Language"
+                
               },
               "export": {
                 "enabled": true

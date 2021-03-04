@@ -25,7 +25,7 @@ export default class Clipboard extends Component{
   render(){
     return(
       <div>
-        <h4>Copy to Clipboard example</h4>
+        <div className="pageHeading">Copy to Clipboard example</div>
         <input type="text" value={this.state.valueFromParams} disabled />
         <button onClick={this.copyText}>Copy Text</button>
       </div>

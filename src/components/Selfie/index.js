@@ -74,6 +74,7 @@ class Selfie extends Component {
     render() {
         return (
             <div className="selfie">
+                <div className="pageHeading">Selfie Page</div>
                 {this.state.imageURL === '' && <div className="cam">
                     <video width="100%" height="100%" className="video-player" autoPlay={true} ref={this.videoEle}></video>
                     <button className="takeApicture" onClick={this.takeSelfie}>
