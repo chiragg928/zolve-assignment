@@ -1,10 +1,10 @@
 # Getting Started with Zolve Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project have three views. 
 
-## Available Script
+### `yarn start`
 
-In the project directory, you can run:
+This command installs all the dependencies.
 
 ### `yarn start`
 
